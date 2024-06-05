@@ -18,3 +18,7 @@ Route::get('/projects', function () {
     return view('projects');
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
